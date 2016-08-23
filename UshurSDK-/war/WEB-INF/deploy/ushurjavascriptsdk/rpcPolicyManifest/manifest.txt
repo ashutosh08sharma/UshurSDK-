@@ -1,0 +1,3 @@
+# Module ushurjavascriptsdk
+# RPC service class, partial path of RPC policy file
+com.ushur.SDK.client.GreetingService, 10841605D262221D39CB7C71DACC0082.gwt.rpc

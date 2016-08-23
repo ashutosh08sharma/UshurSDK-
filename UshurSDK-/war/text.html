@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Notify</title>
+<script
+	src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script
+	src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script
+	src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<!-- Custom Fonts -->
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
+	type="text/css">
+<style type="text/css">
+body {
+	background-color: #FFFFFF;
+}
+</style>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script
+	src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<script src="js/queryUshur.js"></script>
+<body>
+	<div id="wrapper">
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" style="color: #2e6da4" href="home.html">Ushur</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="text.html"><i
+							class="fa fa-fw fa-edit"></i>Send Text</a></li>
+					<li><a href="queryUshur.html"> <i class="fa fa-bar-chart"
+							aria-hidden="true"></i>View Stats
+					</a></li>
+					<li><a href="initiateUshur.html"><i
+							class="fa fa-fw fa-edit"></i>Initiate Ushur</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html"><span
+							class="glyphicon glyphicon-log-in"></span> logout</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div id="page-wrapper">
+
+			<div class="container-fluid">
+
+				<!-- Page Heading -->
+				<div class="row">
+					<div class="col-lg-12">
+						<h1 class="page-header" align="center"
+							style="font-family: 'Open Sans', sans-serif">Sent Text</h1>
+					</div>
+				</div>
+				<!-- /.row -->
+
+				<div class="row"></div>
+				<!-- /.row -->
+
+				<div class="row"></div>
+				<!-- /.row -->
+
+				<div class="row"></div>
+				<!-- /.row -->
+
+				<div class="row"></div>
+				<!-- /.row -->
+
+			</div>
+			<!-- /.container-fluid -->
+
+		</div>
+		<!-- /#page-wrapper -->
+
+	</div>
+	<!-- /#wrapper -->
+	<form class="form-horizontal" name='sent' id="sent"
+		style="font-family: 'Open Sans', sans-serif">
+		<fieldset>
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="message">Message</label>
+				<div class="col-md-4">
+					<input id="message" name="message" type="text"
+						placeholder="message" class="form-control input-md" required>
+				</div>
+			</div>
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="username">User
+					Name</label>
+				<div class="col-md-4">
+					<input id="username" name="uName" type="text"
+						placeholder="ushur username" class="form-control input-md"
+						required>
+				</div>
+			</div>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="phone">Phone No.</label>
+				<div class="col-md-4">
+					<input id="phone" name="phone" type="text"
+						placeholder="Phone Number" class="form-control input-md" required>
+				</div>
+			</div>
+			<br> <br>
+			<div class="form-group">
+				<label class="col-md-5 control-label" for="sendText"></label>
+				<div>
+					<button id="sendText" name="button2id" type="submit"
+						onclick="textMsg()" class="btn btn-success">Send</button>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<button id="button1id" type="reset" name="button1id"
+						class="btn btn-danger">Cancel</button>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+	<script>
+		function textMsg() {
+			ushurapi = new UshurApi();
+			console.log("inside api");
+			var username = $("#username").val;
+			var message = $("#message").val();
+			var phone = $("#phone").val();
+			console.log("Msg");
+			ushurapi.sendTextMessage(message, username, phone);
+			console.log("init called");
+
+		}}
+	</script>
+	<script src="js/UshurclientAPI.js"></script>
+	<script src="js/Restapi.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300'
+		rel='stylesheet' type='text/css'>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Log-in</title>
+<link rel='stylesheet prefetch'
+	href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/login.js"></script>
+<script src="js/UshurclientAPI.js"></script>
+<script src="js/Restapi.js"></script>
+<script
+	src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script
+	src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+</head>
+<body bgcolor="#696969">
+	<center>
+		<img src="img/LogoWithoutMe_Original_Logo_With_U.png" , alt="Ushur"
+			align="center"> </img>
+	</center>
+	<br>
+	<br>
+	<div class="login-card">
+		<h1 style="font-family: 'Helvetica Neue'">Log-in</h1>
+		<br>
+		<form id="login">
+			<p>
+				<input type="text" name="user" id="user" placeholder="Username"
+					required> <input type="password" name="pass" id="pass"
+					placeholder="Password" required>
+			</p>
+			<p align="center">
+				<input type="button" name="Sumbit" onclick="sample()"
+					class="login login-submit" value="login" align="middle" size="12">
+			</p>
+			<div class="loader" style="display: none"></div>
+		</form>
+	</div>
+	<script>
+		function sample() {
+			var user = $("#user").val();
+			var pass = $("#pass").val();
+			loginsample = new UshurApi();
+			loginsample.login(user, pass);
+		}
+	</script>
+</body>
+</html>

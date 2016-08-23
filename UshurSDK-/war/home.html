@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:http="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+    <!--Custom Scripts -->
+    <script src="js/UshurclientAPI.js"></script>
+    <script src="js/Restapi.js"></script>
+    <script src="js/queryUshur.js"></script>
+    <title>Home</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body {
+            background-color: #FFFFFF;
+        }
+    </style>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" style="color:#2e6da4" href="home.html"><b>Ushur</b></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="text.html"><i class="fa fa-fw fa-edit"></i>Send Text</a></li>
+                <li><a href="queryUshur.html"> <i class="fa fa-bar-chart" aria-hidden="true"></i>View Stats</a></li>
+                <li><a href="initiateUshur.html"><i class="fa fa-fw fa-edit"></i>Initiate Ushur</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html"> <span class="glyphicon glyphicon-log-in"></span> logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id=jumbo class="jumbotron" style="text-align: center;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    background-image: url(https://ushur.com/wp-content/uploads/2016/01/Welcome-to-Ushur-tinted-110-min-cropped.png)">
+            <div style="padding-top: 70px">
+                <h1 class="display-3" style="color: #eeeeee">Ushur Javascript SDK Sample</h1>
+                <p class="lead" style="color: #eeeeee">This is a basic example to show who you can create web based
+                    application based on Ushur
+                    Javascript SDK </p>
+                <p class="lead">
+                    <a class="btn btn-primary btn-lg" href="https://ushur.com" role="button">Learn more</a>
+                </p>
+
+                <!--<div class="row banner">-->
+                    <!--<div class="banner-text">-->
+                        <!--<ul class="social">-->
+                            <!--<li><a href="https://github.com/ashutosh08sharma/ushurSDK"><i class="fa fa-github"></i></a></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+    <div style="padding-left: 5%">
+        <article style="font-size:large;font-family: bold">
+            <h1 style="color: #2e6da4"> Our Vision</h1>
+            <p style="font-family: Helvetica Neue">
+                We started Ushur with a vision to simplify the way businesses engage their customers.
+                Enterprises are moving service management to the Cloud; but the new solutions are missing
+                real-time mobile engagement through self-service workflows. We developed the Ushur platform to
+                provide instant, persistent, two-way text based workflows. Our solutions are customized by the
+                Enterprise; designed for the mobile user, and work seamlessly on top of existing service
+                delivery platforms like ServiceNow.
+            </p>
+            <p style="font-family: Helvetica Neue">
+                Deploying Ushur micro-engagements dramatically reduces costs by eliminating incoming calls to
+                the service-desk and replacing them with self-service workflows.
+            </p>
+        </article>
+    </div>
+<!-- /#wrapper -->
+</body>
+</html>

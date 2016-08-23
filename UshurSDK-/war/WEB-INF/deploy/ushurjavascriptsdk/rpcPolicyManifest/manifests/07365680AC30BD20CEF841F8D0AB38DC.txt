@@ -1,0 +1,2 @@
+serviceClass: com.ushur.SDK.client.GreetingService
+path: 10841605D262221D39CB7C71DACC0082.gwt.rpc
